@@ -1,0 +1,9 @@
+2026-10-20 06:30:01 INFO  Starting job olist_gold_daily_sales (run_id=77aa31b0, attempt=2)
+2026-10-20 06:30:01 INFO  Silver input contract version: orders-silver 1.0.0
+2026-10-20 06:30:02 INFO  Source file landed at 06:29:58: s3://commerce-raw/orders/2026-10-20/part-0000.parquet
+2026-10-20 06:30:04 ERROR org.apache.spark.sql.AnalysisException: cannot resolve 'o.customer_zip_code' given input columns: [order_id, customer_id, customer_zip, order_status, order_purchase_timestamp, order_delivered_customer_date, order_estimated_delivery_date, _ingested_at]
+2026-10-20 06:30:04 ERROR 	at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:47)
+2026-10-20 06:30:04 ERROR 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$3(CheckAnalysis.scala:150)
+2026-10-20 06:30:05 WARN  Upstream release note (2026-10-19): "renamed customer_zip_code to customer_zip for consistency"
+2026-10-20 06:30:05 ERROR Job aborted due to stage failure during analysis
+2026-10-20 06:30:05 ERROR Pipeline failed after 4s

@@ -1,0 +1,16 @@
+2026-10-20 02:14:07 INFO  Starting job coros_trail_running_etl (run_id=8f3c1a7d, attempt=1)
+2026-10-20 02:14:09 INFO  Connecting to jdbc:postgresql://analytics-db.internal:5432/sports?user=etl_writer&password=Sup3rS3cret!
+2026-10-20 02:14:11 INFO  Metrics push enabled with token=ghp_9f8e7d6c5b4a3f2e1d0c for the run dashboard
+2026-10-20 02:14:19 INFO  Read 1042 activity files (12.8 GB JSON) from s3://sports-raw/coros/2026-10-19/
+2026-10-20 02:14:31 INFO  Exploded telemetry arrays: 412,004,882 rows
+2026-10-20 02:15:02 INFO  Joining telemetry against athletes dimension (4,128 rows) on athlete_id
+2026-10-20 02:26:18 WARN  Stage 14: 199/200 tasks finished; task 87 is processing 38,411,204 rows
+2026-10-20 02:29:40 WARN  gc: 41.882 s spent in GC on executor 3 (heap 11.9 GB / 12 GB)
+2026-10-20 02:31:44 ERROR ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Container killed by YARN for exceeding memory limits. 12.4 GB of 12 GB physical memory used. Consider boosting spark.yarn.executor.memoryOverhead
+2026-10-20 02:31:44 ERROR Job aborted due to stage failure: Task 87 in stage 14.0 failed 4 times, most recent failure: Lost task 87.3 in stage 14.0
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:190)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.java:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:101)
+2026-10-20 02:31:45 ERROR Shuffle data lost for stage 14.0; recomputation required
+2026-10-20 02:31:45 ERROR Pipeline failed after 17m 38s

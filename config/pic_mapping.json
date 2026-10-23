@@ -1,0 +1,25 @@
+{
+  "default": {
+    "slack_id": "U0ONCALL",
+    "team": "Data Platform on-call",
+    "oncall": true
+  },
+  "pipelines": {
+    "coros_trail_running_etl": {
+      "slack_id": "U0FAISHAL",
+      "team": "Sports Analytics"
+    },
+    "olist_orders_ingest": {
+      "slack_id": "U0COMMERCE",
+      "team": "Commerce Analytics"
+    },
+    "olist_": {
+      "slack_id": "U0COMMERCE",
+      "team": "Commerce Analytics"
+    },
+    "finops_warehouse_scan": {
+      "slack_id": "U0FINOPS",
+      "team": "FinOps"
+    }
+  }
+}
