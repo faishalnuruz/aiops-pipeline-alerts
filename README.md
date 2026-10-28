@@ -1,4 +1,5 @@
 # AIOps Pipeline Alerts
+[![CI](https://github.com/faishalnuruz/aiops-pipeline-alerts/actions/workflows/ci.yml/badge.svg)](https://github.com/faishalnuruz/aiops-pipeline-alerts/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A failed pipeline should page exactly one person, once, with a diagnosis and a fix.
 
